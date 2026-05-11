@@ -61,6 +61,14 @@ flutter:
   assets:
     - assets/images/
     - assets/images/avatars/
+    - assets/fonts/
+
+  fonts:
+    - family: PoppinsAssets
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
