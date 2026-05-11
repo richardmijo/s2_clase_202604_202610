@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'image_showcase.dart';
 
 void main() {
   runApp(const MyApp());
@@ -123,6 +124,27 @@ class PresentationPage extends StatelessWidget {
                     Icons.folder_copy_outlined,
                     'Estructura de Carpetas',
                     'Organización lógica de recursos en assets/images.',
+                  ),
+                  const SizedBox(height: 32),
+                  _buildSectionTitle('Demos de Clase'),
+                  const SizedBox(height: 16),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const ImageShowcaseScreen()),
+                      );
+                    },
+                    icon: const Icon(Icons.slideshow_outlined),
+                    label: const Text('Ver Showcase del Widget Image'),
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(double.infinity, 50),
+                      backgroundColor: const Color(0xFF0D47A1),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
                   ),
                 ],
               ),
