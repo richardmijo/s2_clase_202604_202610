@@ -53,7 +53,11 @@ class PresentationPage extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
-                    colors: [Color(0xFF0D47A1), Color(0xFF1976D2), Color(0xFF42A5F5)],
+                    colors: [
+                      Color(0xFF0D47A1),
+                      Color(0xFF1976D2),
+                      Color(0xFF42A5F5),
+                    ],
                   ),
                 ),
                 child: Center(
@@ -61,10 +65,7 @@ class PresentationPage extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 40),
                     child: Hero(
                       tag: 'logo',
-                      child: Image.asset(
-                        'assets/images/logo.png',
-                        height: 150,
-                      ),
+                      child: Image.asset('assets/images/logo.png', height: 150),
                     ),
                   ),
                 ),
@@ -101,10 +102,22 @@ class PresentationPage extends StatelessWidget {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        _buildAvatarCard('Ana García', 'assets/images/avatars/student_1.png'),
-                        _buildAvatarCard('Carlos Ruiz', 'assets/images/avatars/student_2.png'),
-                        _buildAvatarCard('Elena Mora', 'assets/images/avatars/student_1.png'),
-                        _buildAvatarCard('Luis Páez', 'assets/images/avatars/student_2.png'),
+                        _buildAvatarCard(
+                          'Ana García',
+                          'assets/images/avatars/student_1.png',
+                        ),
+                        _buildAvatarCard(
+                          'Carlos Ruiz',
+                          'assets/images/avatars/student_2.png',
+                        ),
+                        _buildAvatarCard(
+                          'Elena Mora',
+                          'assets/images/avatars/student_1.png',
+                        ),
+                        _buildAvatarCard(
+                          'Luis Páez',
+                          'assets/images/avatars/student_2.png',
+                        ),
                       ],
                     ),
                   ),
@@ -133,7 +146,9 @@ class PresentationPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const ImageShowcaseScreen()),
+                        MaterialPageRoute(
+                          builder: (context) => const ImageShowcaseScreen(),
+                        ),
                       );
                     },
                     icon: const Icon(Icons.slideshow_outlined),

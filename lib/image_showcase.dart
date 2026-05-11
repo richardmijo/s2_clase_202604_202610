@@ -37,7 +37,7 @@ class ImageShowcaseScreen extends StatelessWidget {
             subtitle: 'Carga desde una URL de internet.',
             child: Image.network(
               'https://picsum.photos/seed/uide/400/200',
-              height: 100,
+              height: 200,
               fit: BoxFit.cover,
             ),
           ),
